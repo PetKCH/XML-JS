@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>XML Projekt - Petar Kosanović</title>
+	</head>
+  <header align="center" style="background-color:cadetblue">
+    <h1>Projekt XML - Petar Kosanović</h1>
+  </header>
+	<body style="background-color:powderblue;">
+    <div align="center">
+        <table id="prikaz">
+        </table>
+        <script>
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                ispis(this);
+              }
+            };
+            xmlhttp.open("GET", "Komponente.xml", true);
+            xmlhttp.send();
+          
+          function ispis(xml) {
+            var img = new Image();
+            var i;
+            var xmlDoc = xml.responseXML;
+            var table="";
+            var x = xmlDoc.getElementsByTagName("Graficka");
+            for (i = 0; i <x.length; i++) {
+              img.src = x[i].getElementsByTagName("Slika")[0].childNodes[0].nodeValue;
+              table += "<img width=150 alt='Missing' src=" + img.src + "><p><b>Model:</b> " +
+              x[i].getElementsByTagName("Model")[0].childNodes[0].nodeValue +
+              "</p><p><b>Proizvođač: </b> " +
+              x[i].getElementsByTagName("Proizvodac")[0].childNodes[0].nodeValue +
+              "</p><p><b>ID: </b> " +
+              x[i].getElementsByTagName("ID")[0].childNodes[0].nodeValue +
+              "</p><p><b>Cijena: </b> " +
+              x[i].getElementsByTagName("Cijena")[0].childNodes[0].nodeValue +
+              "</p><hr>";
+            }
+            document.getElementById("prikaz").innerHTML = table;
+          }
+        </script>
+      </div>
+	</body>
+</html>

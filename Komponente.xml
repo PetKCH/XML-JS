@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Komponente>
+    <Graficka> 
+      <Model vrsta="NVIDIA">RTX 3070</Model>
+      <Proizvodac>Palit</Proizvodac>
+      <ID>Palit Dual Fan</ID>
+      <Cijena>5000kn</Cijena>
+      <Slika>slika/palitdual.jpg</Slika>
+    </Graficka>
+    <Graficka> 
+      <Model vrsta="NVIDIA">RTX 3060</Model>
+      <Proizvodac>Palit</Proizvodac>
+      <ID>Palit Jetstream</ID>
+      <Cijena>3999kn</Cijena>
+      <Slika>slika/palitjetstream.jpg</Slika>
+    </Graficka>
+    <Graficka> 
+      <Model vrsta="NVIDIA">RTX 3060 Ti</Model>
+      <Proizvodac>Nvidia</Proizvodac>
+      <ID>Nvidia Stock</ID>
+      <Cijena>4599kn</Cijena>
+      <Slika>slika/nvidiastock.jpg</Slika>
+    </Graficka>
+    <Graficka> 
+      <Model vrsta="NVIDIA">RTX 3060 Ti</Model>
+      <Proizvodac>Nvidia</Proizvodac>
+      <ID>Nvidia Stock</ID>
+      <Cijena>4599kn</Cijena>
+      <Slika>null</Slika>
+    </Graficka>
+</Komponente>
